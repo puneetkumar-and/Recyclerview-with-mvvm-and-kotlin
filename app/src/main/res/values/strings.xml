@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+
+    <string name="network_unavailable">No Network Available</string>
+    <string name="generic_unknown_error">unknown error</string>
+    <string name="server_connection_error">Unable to connect to server at this time.</string>
+    <string name="loading">Loading…</string>
+    <string name="error_oh_snap_error_title">Oh Snap!</string>
+    <string name="error_oh_snap_error_message">We encountered an unexpected error.</string>
+    <string name="error_no_network_connection_error_title">OOPS! NETWORK ERROR</string>
+    <string name="error_no_network_connection_error_message">Looks like you don\'t have network connection, pull to refresh to try again.</string>
+    <string name="error_empty_message">OOPS…! You have not recevied any data yet.</string>
+    <string name="reponame">Name</string>
+    <string name="repourl">Url</string>
+    <string name="repodescription">Description</string>
+
+</resources>
+

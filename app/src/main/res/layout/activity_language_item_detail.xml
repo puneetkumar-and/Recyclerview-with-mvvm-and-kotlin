@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_12"
+        tools:context=".views.home.languagedetailitem.LanguageItemDetailActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/reponame"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toStartOf="@+id/repo_name_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_name_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/repo_description_value"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="James Smith" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/repourl"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toStartOf="@+id/repo_url_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repo_name_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_url_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/repo_description_value"
+            app:layout_constraintTop_toBottomOf="@+id/repo_name_value"
+            tools:text="James Smith" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/repodescription"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toStartOf="@+id/repo_description_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repo_url_value" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repo_description_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/repo_description"
+            app:layout_constraintTop_toBottomOf="@+id/repo_url_value"
+            tools:text="James Smith" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

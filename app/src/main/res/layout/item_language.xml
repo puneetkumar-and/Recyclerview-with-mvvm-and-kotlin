@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.demo.views.home.languagedata.LanguageItemViewModel" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/padding_12">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatarImage"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="@dimen/margin_12"
+                android:layout_marginTop="@dimen/margin_6"
+                android:src="@mipmap/ic_launcher"
+                tools:background="@mipmap/ic_launcher"
+                app:roundAsCircle="true"
+                app:roundingBorderWidth="1dp"
+                app:roundingBorderColor="@color/colorPrimaryDark"
+                app:url="@{data.packageImageUrl}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/user_name"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/user_name"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="12dp"
+               android:layout_weight="1"
+               android:fontFamily="@font/opensans_bold"
+               android:text="@{data.incomingPackage.username}"
+               android:textColor="@color/colorPrimary"
+               android:textSize="@dimen/font_16"
+               tools:text="James Smith"
+               app:layout_constraintStart_toEndOf="@+id/avatarImage"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@id/avatarImage"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/name"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="12dp"
+               android:layout_weight="1"
+               android:fontFamily="@font/opensans_bold"
+               android:text="@{data.incomingPackage.name}"
+               android:textColor="@color/colorPrimary"
+               android:textSize="@dimen/font_16"
+               tools:text="James Smith"
+               app:layout_constraintStart_toEndOf="@+id/avatarImage"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/user_name"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/url"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="12dp"
+               android:layout_weight="1"
+               android:fontFamily="@font/opensans_bold"
+               android:text="@{data.incomingPackage.url}"
+               android:textColor="@color/colorPrimary"
+               android:textSize="@dimen/font_16"
+               tools:text="James Smith"
+               app:layout_constraintStart_toEndOf="@+id/avatarImage"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/name"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
+
+
